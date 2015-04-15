@@ -33,7 +33,7 @@ public class BeamSearch implements SearchAlgorithm{
 				Location newLoc = queue.getFirst();
 				//sleep for distance between the two locations....
 				try {
-					Thread.sleep(loc.calculateDistance(newLoc)*10);
+					Thread.sleep(loc.calculateDistance(newLoc)*15);
 					if(loc.checkForMainCharacter()){
 						//dont display if in battle
 						if(!GamePlay.myChar.isFighting())

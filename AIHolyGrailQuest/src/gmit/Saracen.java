@@ -27,7 +27,7 @@ private float lifeForce = 100.00f;
 				break;
 			}
 			
-			if(this.currLoc.checkForMainCharacter()){
+			if((this.currLoc.checkForMainCharacter())&&(!GamePlay.myChar.isFighting())){
 				fight();
 				break;
 			}

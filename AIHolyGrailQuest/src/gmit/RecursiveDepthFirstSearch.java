@@ -62,7 +62,7 @@ public class RecursiveDepthFirstSearch implements SearchAlgorithm {
 					//SLEEP for distance between nodes
 					try {
 						//System.out.println(travelTime);
-						Thread.sleep(travelTime*10);
+						Thread.sleep(travelTime*15);
 						if(prevLoc.checkForMainCharacter()){
 							//dont display if in battle
 							if(!GamePlay.myChar.isFighting())

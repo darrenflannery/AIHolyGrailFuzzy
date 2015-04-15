@@ -14,7 +14,7 @@ public class Wander implements SearchAlgorithm {
 		
 		//SLEEP for distance between the two locations....
 		try {
-			Thread.sleep(loc.calculateDistance(newLoc)*10);
+			Thread.sleep(loc.calculateDistance(newLoc)*15);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

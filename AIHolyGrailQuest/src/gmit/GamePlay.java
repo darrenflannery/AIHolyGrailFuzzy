@@ -55,9 +55,34 @@ public class GamePlay {
 							System.exit(0);
 						}
 					}
-					move();
+					directionInput();
 					if(myChar.getCurrLoc().isGoalNode()){
-						System.out.println("You Win!");
+						int cnt=0;
+						int attack = 0;
+						FuzzyLogic fl = new FuzzyLogic();
+						for(GameCharacter gc: myChar.getCurrLoc().getCharList().values()){
+							cnt++;
+							attack = attack + (int) fl.Attack(gc.getAggressiveness(), gc.getAccuracy());
+						}
+						if(cnt>0){
+							try {
+								System.out.println(cnt + " saracens are waiting for you...");
+								Thread.sleep(3000);
+								System.out.println("You are fighting " + cnt + " saracens");
+								Thread.sleep(3000);
+								myChar.setLifeForce(myChar.getLifeForce()-attack);
+								System.out.println("They have taken " + attack + " from your health");
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
+						}
+						if(myChar.getLifeForce()>0){
+							System.out.println("Your health is " + myChar.getLifeForce());
+							System.out.println("You have survived! You Win!");
+						}
+						else{
+							System.out.println("You are dead...");
+						}
 						System.exit(0);
 					}
 					myChar.setFighting(false);
@@ -75,7 +100,8 @@ public class GamePlay {
 	}
 	
 	
-	public static void move(){
+	public static void directionInput(){
+		myChar.getCurrLoc().containsMainChar(false);
 		boolean exitExists = false;
 		String m="";
 		System.out.println("Which direction?");
@@ -91,12 +117,12 @@ public class GamePlay {
 			boolean hasExit = myChar.move(dir);
 			if(!hasExit){
 				System.out.println("Cant go that direction, try again...");
-				move();
+				directionInput();
 			}
 		}
 		else{
 			System.out.println("You cant go that way, try again...");
-			move();
+			directionInput();
 		}
 	}
 	
