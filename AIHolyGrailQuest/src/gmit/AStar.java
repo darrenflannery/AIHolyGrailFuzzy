@@ -60,9 +60,7 @@ public class AStar implements SearchAlgorithm{
 			gc.getCurrLoc().removeFromCharacterList(gc.getName());
 			gc.setCurrLoc(path.get(i));
 			gc.getCurrLoc().addToCharacterList(gc.getName(), gc);
-			
-			//System.out.println(gc.getName() + " is in " + gc.getCurrLoc().getName());
-			
+		
 			//Game character enters your location
 			if(gc.getCurrLoc().checkForMainCharacter()){
 				//dont display if in battle
@@ -79,8 +77,7 @@ public class AStar implements SearchAlgorithm{
 				if((n<=chanceOfAttack)&&(!GamePlay.myChar.isFighting())){
 					break;
 				}
-				else continue;
-				
+				else continue;			
 			}
 			
 			if(i<path.size()-1){

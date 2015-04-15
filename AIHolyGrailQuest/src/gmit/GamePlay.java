@@ -16,17 +16,19 @@ public class GamePlay {
 				+ "Mount and brining it safely to Cyprus\n\n"
 				
 				+ "You are have reached Jerusalem and a saracen army is searchin for you on their way to Cyprus,"
-				+ "\nReturn the Holy Grail to Cyprus by avoiding the saracen Army\n\n");	
+				+ "\nReturn the Holy Grail to Cyprus by avoiding the saracen Army\n\n");
+		
 		//parse XML file
 		parser.parse();
 		
+		//start game
 		start();
 	}
 	
 	public static void start(){
 		//set the starting location of main character
 		myChar.setCurrLoc(parser.getFullLocationList().get(1));
-		myChar.look();
+		MyCharacter.look();
 		
 		//while character is still alive
 		while(myChar.getLifeForce()>=1){
@@ -37,8 +39,10 @@ public class GamePlay {
 	public static void input(){
 		System.out.println("What would you like to do? (move, look, fight)?");
 			String in = sc.nextLine().toLowerCase();
+			
 			switch(in){
 				case "move":
+					//if main character is fighting - this is to run from fight
 					if(myChar.isFighting())
 					{
 						FuzzyLogic fl = new FuzzyLogic();
@@ -55,7 +59,10 @@ public class GamePlay {
 							System.exit(0);
 						}
 					}
+					//choose direction
 					directionInput();
+					//if you reached goal node (Cyprus) - count number of saracens waiting there and
+					//add their attack power and take it from your health
 					if(myChar.getCurrLoc().isGoalNode()){
 						int cnt=0;
 						int attack = 0;
@@ -76,10 +83,12 @@ public class GamePlay {
 								e.printStackTrace();
 							}
 						}
+						//if you survive
 						if(myChar.getLifeForce()>0){
 							System.out.println("Your health is " + myChar.getLifeForce());
 							System.out.println("You have survived! You Win!");
 						}
+						//dead
 						else{
 							System.out.println("You are dead...");
 						}
@@ -99,7 +108,7 @@ public class GamePlay {
 		}
 	}
 	
-	
+	//get direction from user (n,w,e,s)
 	public static void directionInput(){
 		myChar.getCurrLoc().containsMainChar(false);
 		boolean exitExists = false;
@@ -126,6 +135,7 @@ public class GamePlay {
 		}
 	}
 	
+	//choose character to fight
 	public static void fight(){
 		System.out.println("Who do you want to fight?");
 		String input = sc.nextLine();
