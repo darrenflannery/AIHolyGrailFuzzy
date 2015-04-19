@@ -71,31 +71,31 @@
 	<game-character name="Viscious Saracen" type="gmit.Saracen" startingLocation="4" search="gmit.AStar" aggressiveness="8" observance="8" accuracy="8">
 	</game-character> 
 	
-	<game-character name="Black Saracen" type="gmit.Saracen" startingLocation="9" search="gmit.AStar" aggressiveness="4" observance="2" accuracy="6">
+	<game-character name="Black Saracen" type="gmit.Saracen" startingLocation="9" search="gmit.AStar" aggressiveness="7" observance="2" accuracy="8">
 	</game-character>
 	
-	<game-character name="Red Saracen" type="gmit.Saracen" startingLocation="4" search="gmit.RecursiveDepthFirstSearch" aggressiveness="8" observance="9" accuracy="1">
+	<game-character name="Red Saracen" type="gmit.Saracen" startingLocation="4" search="gmit.RecursiveDepthFirstSearch" aggressiveness="9" observance="9" accuracy="5">
 	</game-character> 
 	
-	<game-character name="Purple Saracen" type="gmit.Saracen" startingLocation="7" search="gmit.RecursiveDepthFirstSearch" aggressiveness="8" observance="9" accuracy="1">
+	<game-character name="Purple Saracen" type="gmit.Saracen" startingLocation="7" search="gmit.RecursiveDepthFirstSearch" aggressiveness="7" observance="9" accuracy="9">
 	</game-character> 
 
 	<game-character name="Green Saracen" type="gmit.Saracen" startingLocation="8" search="gmit.BeamSearch" aggressiveness="5" observance="8" accuracy="9">
 	</game-character> 
 	
-	<game-character name="Blue Saracen" type="gmit.Saracen" startingLocation="5" search="gmit.Idle" aggressiveness="5" observance="8" accuracy="9">
+	<game-character name="Blue Saracen" type="gmit.Saracen" startingLocation="5" search="gmit.Idle" aggressiveness="6" observance="8" accuracy="9">
 	</game-character> 
 	
-	<game-character name="Brown Saracen" type="gmit.Saracen" startingLocation="10" search="gmit.Idle" aggressiveness="2" observance="2" accuracy="6">
+	<game-character name="Brown Saracen" type="gmit.Saracen" startingLocation="10" search="gmit.Idle" aggressiveness="2" observance="2" accuracy="9">
 	</game-character> 
 	
 	<game-character name="Blue Saracen" type="gmit.Saracen" startingLocation="8" search="gmit.Idle" aggressiveness="5" observance="8" accuracy="8">
 	</game-character> 
 	
-	<game-character name="Gray Saracen" type="gmit.Saracen" startingLocation="4" search="gmit.Idle" aggressiveness="2" observance="2" accuracy="4">
+	<game-character name="Gray Saracen" type="gmit.Saracen" startingLocation="4" search="gmit.Idle" aggressiveness="6" observance="2" accuracy="8">
 	</game-character> 
 	
-	<game-character name="Lost Saracen No.1" type="gmit.Saracen" startingLocation="2" search="gmit.Wander" aggressiveness="1" observance="9" accuracy="7">
+	<game-character name="Lost Saracen No.1" type="gmit.Saracen" startingLocation="2" search="gmit.Wander" aggressiveness="9" observance="9" accuracy="7">
 	</game-character>
 	
 	<game-character name="Lost Saracen No.2" type="gmit.Saracen" startingLocation="4" search="gmit.Wander" aggressiveness="9" observance="1" accuracy="7">

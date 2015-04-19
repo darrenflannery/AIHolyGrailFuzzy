@@ -15,6 +15,13 @@ public class Wander implements SearchAlgorithm {
 		//SLEEP for distance between the two locations....
 		try {
 			Thread.sleep(loc.calculateDistance(newLoc)*15);
+			if(loc.checkForMainCharacter()){
+				//dont display if in battle
+				if(!GamePlay.myChar.isFighting())
+				{
+					System.out.println(gc.getName() + " just left " + GamePlay.myChar.getCurrLoc().getName());
+				}
+			}
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

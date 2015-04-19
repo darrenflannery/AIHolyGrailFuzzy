@@ -1,6 +1,10 @@
 package gmit;
 
 public interface GameCharacter extends Runnable{
+	
+	public int getLifeForce();
+	
+	public void setLifeForce(int lifeForce);
 
 	public abstract void setAccuracy(int accuracy);
 

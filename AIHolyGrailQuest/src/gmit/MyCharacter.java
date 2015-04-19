@@ -91,6 +91,8 @@ public class MyCharacter{
 		System.out.println(gc.getName() + " did " + n + " damage to your health!");
 		GamePlay.myChar.setFighting(false);
 		GamePlay.myChar.setLifeForce(GamePlay.myChar.getLifeForce() - n);
+		GamePlay.myChar.attacked.getCurrLoc().removeFromCharacterList(GamePlay.myChar.attacked.getName());
+		GamePlay.myChar.attacked.setLifeForce(0);
 		
 		if(GamePlay.myChar.getLifeForce()>0){
 			System.out.println("Your new health is " + GamePlay.myChar.getLifeForce());

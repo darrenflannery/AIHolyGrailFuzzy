@@ -4,11 +4,8 @@ import java.util.Random;
 
 public class Saracen extends AbstractGameCharacter{
 
-private float lifeForce = 100.00f;
-
-	
 	public void run() {
-		while (lifeForce > 0.00f){
+		while (lifeForce > 0){
 			Random rand = new Random();
 			int  n = rand.nextInt(5000) + 100;
 			

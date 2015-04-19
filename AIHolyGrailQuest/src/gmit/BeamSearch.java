@@ -38,7 +38,7 @@ public class BeamSearch implements SearchAlgorithm{
 						//dont display if in battle
 						if(!GamePlay.myChar.isFighting())
 						{
-							System.out.println(gc.getName() + " just left " + GamePlay.myChar.getCurrLoc().getName() + ", you escaped unharmed...");
+							System.out.println(gc.getName() + " just left " + GamePlay.myChar.getCurrLoc().getName());
 						}
 					}
 				} catch (InterruptedException e) {

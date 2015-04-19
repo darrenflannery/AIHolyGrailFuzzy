@@ -74,9 +74,9 @@ public class GamePlay {
 						if(cnt>0){
 							try {
 								System.out.println(cnt + " saracens are waiting for you...");
-								Thread.sleep(3000);
+								Thread.sleep(4000);
 								System.out.println("You are fighting " + cnt + " saracens");
-								Thread.sleep(3000);
+								Thread.sleep(4000);
 								myChar.setLifeForce(myChar.getLifeForce()-attack);
 								System.out.println("They have taken " + attack + " from your health");
 							} catch (InterruptedException e) {

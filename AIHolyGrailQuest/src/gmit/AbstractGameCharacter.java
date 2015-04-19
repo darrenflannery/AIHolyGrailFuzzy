@@ -7,6 +7,16 @@ public abstract class AbstractGameCharacter implements GameCharacter{
 	protected int aggressiveness;
 	protected int observance;
 	protected int accuracy;
+	protected int lifeForce = 100;
+	
+
+	public int getLifeForce() {
+		return lifeForce;
+	}
+
+	public void setLifeForce(int lifeForce) {
+		this.lifeForce = lifeForce;
+	}
 
 	public int getAccuracy() {
 		return accuracy;
