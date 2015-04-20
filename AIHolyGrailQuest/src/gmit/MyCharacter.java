@@ -95,6 +95,7 @@ public class MyCharacter{
 		GamePlay.myChar.attacked.setLifeForce(0);
 		
 		if(GamePlay.myChar.getLifeForce()>0){
+			System.out.println(GamePlay.myChar.attacked.getName() + " is dead");
 			System.out.println("Your new health is " + GamePlay.myChar.getLifeForce());
 			GamePlay.input();
 		}
